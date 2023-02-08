@@ -8,13 +8,15 @@ function App() {
         <>
             <Navbar />
             <Hero />
-            {data.map(dat => (<Card img={dat.coverImg}
-                rating={dat.stats.rating}
-                reviewCount={dat.stats.reviewCount}
-                location={dat.location}
-                title={dat.title}
-                price={dat.price} />
-            ))}
+            <section className="cards">
+                {data.map(dat => (<Card img={dat.coverImg}
+                    rating={dat.stats.rating}
+                    reviewCount={dat.stats.reviewCount}
+                    location={dat.location}
+                    title={dat.title}
+                    price={dat.price} />
+                ))}
+            </section>
         </>
     )
 }

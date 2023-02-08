@@ -42,8 +42,19 @@ p, span, h3 {
     font-weight: 300;
 }
 
+.cards {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+}
+
 .card {
     width: 176px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .card--image {
@@ -64,6 +75,7 @@ p, span, h3 {
 .card--image img {
     width: 100%;
     border-radius: 9px;
+    max-height: 235px;
 }
 
 .card--rating {
@@ -89,11 +101,13 @@ h3 {
     font-weight: 300;
     font-size: 12px;
     margin: 0px 0px 8px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card > p {
     font-size: 12px;
-    margin: 0px;
+    margin-top: auto;
 }
 
 .card > p > span {
