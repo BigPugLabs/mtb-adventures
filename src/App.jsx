@@ -8,15 +8,18 @@ function App() {
         <>
             <Navbar />
             <Hero />
-            <section className="cards">
-                {data.map(dat => (<Card img={dat.coverImg}
-                    rating={dat.stats.rating}
-                    reviewCount={dat.stats.reviewCount}
-                    location={dat.location}
-                    title={dat.title}
-                    price={dat.price} />
-                ))}
-            </section>
+            <div className="inline-container">
+                <div className="cards">
+                    {data.map((dat, i) => (<Card key={i}
+                        img={dat.coverImg}
+                        rating={dat.stats.rating}
+                        reviewCount={dat.stats.reviewCount}
+                        location={dat.location}
+                        title={dat.title}
+                        price={dat.price} />
+                    ))}
+                </div>
+            </div>
         </>
     )
 }
