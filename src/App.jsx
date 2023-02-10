@@ -10,14 +10,7 @@ function App() {
             <Hero />
             <div className="inline-container">
                 <div className="cards">
-                    {data.map((dat, i) => (<Card key={i}
-                        img={dat.coverImg}
-                        rating={dat.stats.rating}
-                        reviewCount={dat.stats.reviewCount}
-                        location={dat.location}
-                        title={dat.title}
-                        price={dat.price} />
-                    ))}
+                    {data.map(dat => <Card key={dat.id} {...dat} />)}
                 </div>
             </div>
         </>

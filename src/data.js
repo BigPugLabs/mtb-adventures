@@ -49,6 +49,19 @@ export default [
             reviewCount: 5
         },
         location: "The quarry",
-        openSpots: 3,
+        openSpots: 0,
+    },
+    {
+        id: 5,
+        title: "Triathlon Pain",
+        description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
+        price: 15,
+        coverImg: "katie-zaferes.png",
+        stats: {
+            rating: 3.9,
+            reviewCount: 5
+        },
+        location: "Online",
+        openSpots: 5,
     }
 ]

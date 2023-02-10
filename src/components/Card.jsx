@@ -1,13 +1,23 @@
 import star from "../assets/star.png"
 
-export function Card({ img, rating, reviewCount, location, title, price }) {
-    const imgUrl = new URL(`../assets/${img}`, import.meta.url).href
+export function Card({ coverImg, stats: { rating, reviewCount }, location, title, price, openSpots }) {
+
+    // handle adding hash to static assets
+    const imgUrl = new URL(`../assets/${coverImg}`, import.meta.url).href
+
+    // handle image overlay text info
+    let badgeText
+    if (openSpots == 0) {
+        badgeText = "SOLD OUT"
+    } else if (location == "Online") {
+        badgeText = "Online"
+    }
 
     return (
         <section className="card">
             <div className="card--image">
-                <span>SOLD OUT</span>
-                <img src={imgUrl} alt={img} />
+                {badgeText && <span>{badgeText}</span>}
+                <img src={imgUrl} alt={coverImg} />
             </div>
             <div className="card--rating">
                 <img src={star} alt="star" />
